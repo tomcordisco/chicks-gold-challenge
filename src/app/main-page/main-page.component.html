@@ -1,0 +1,223 @@
+<div class="main-container">
+    <header>
+
+        <div class="menu-mobile">
+            <img [src]="assetPaths.menu" alt="Icon Image">
+        </div>
+
+        <div class="hdr-section hdr-section-1">
+            <img [src]="assetPaths.logo" alt="Icon Image">
+            <div class="separator"></div>
+        </div>
+
+        <div class="hdr-section hdr-section-2 hide-section">
+            <div class="items">
+                <span>Currency</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <span>Items</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <span>Account</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <span>Services</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <span>Swap</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <span>Seel</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+        </div>
+
+        <div class="hdr-section hdr-section-3">
+            <div class="items">
+                <span>USD</span>
+                <img [src]="assetPaths.arrow" alt="Icon Image">
+            </div>
+            <div class="items">
+                <img [src]="assetPaths.cart" alt="Icon Image">
+                <span> Cart (5)</span>
+            </div>
+            <button>
+                <span>Sing In</span>
+                <img [src]="assetPaths.profile" alt="Icon Image">
+            </button>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="main-section">
+            <div class="title">Condimentum consectetur</div>
+
+            <div class="filters">
+
+                <div class="game">
+                    <div class="section-1">
+                        <img [src]="assetPaths.gamecontrol" alt="">
+                        <select>
+                            <option>Select a game</option>
+                            <option value="game1">Zelda</option>
+                            <option value="game2">Zelda</option>
+                            <option value="game3">Zelda</option>
+                        </select>
+                    </div>
+                    <img [src]="assetPaths.arrow" alt="">
+                </div>
+
+                <div class="search-bar">
+                    <img [src]="assetPaths.search" alt="">
+                    <input type="text" placeholder="Search" />
+                </div>
+
+                <div class="">
+                    
+                </div>
+
+                <div class="boxes">
+                    <div class="box">
+                        <div class="title">Price</div>
+                        <div class="section">
+                            <img [src]="assetPaths.bag" alt="">
+                            <select>
+                                <option>All</option>
+                            </select>
+                        </div>
+                        <img [src]="assetPaths.arrow" alt="" class="arrow">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <div class="title">Item Type</div>
+                        <div class="section">
+                            <img [src]="assetPaths.feather" alt="">
+                            <select>
+                                <option>All</option>
+                            </select>
+                        </div>
+                        <img [src]="assetPaths.arrow" alt="" class="arrow">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            
+            <div class="cards-container">
+
+                <div class="top-cards">
+                    <div class="top-pagination">
+                        Showing 20 - from 125
+                    </div>
+                    <div class="featured">
+                        <div class="title">Sort By</div>
+                        <img [src]="assetPaths.filter" alt="" class="img-filter">
+                        <div>Featured</div>
+                        <img [src]="assetPaths.arrow" alt="" class="arrow">
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <div class="card" *ngFor="let product of products">
+                        <div class="quantity">{{ product.quantity }}</div>
+                        <div class="sale">{{ product.sale }}</div>
+                        <div class="stock">{{ product.stock }}</div>
+                        <img class="image" [src]="product.image" alt="">
+                        <div class="title">{{ product.title }}</div>
+                        <div class="prices">
+                            <div class="price">${{ product.price }}</div>
+                            <div class="old-price">${{ product.oldPrice }}</div>
+                        </div>
+                        <div class="description">{{ product.description }}</div>
+                        <div class="actions">
+                            <button class="details btn-info">Details</button>
+                            <button class="cart btn-info">
+                                <span class="text">Add</span>
+                                <span class="image">
+                                    <img class="cart-img" [src]="product.cartImage" alt="">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <div class="arrow-container">
+                        <img [src]="assetPaths.leftarrow" alt="">
+                    </div>
+
+                    <div class="number number-selected">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">...</div>
+                    <div class="number">11</div>
+
+                    <div class="arrow-container">
+                        <img [src]="assetPaths.rightarrow" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="currency">
+                <img [src]="assetPaths.visa" alt="" class="img-1">
+                <img [src]="assetPaths.mastercard" alt="" class="img-1">
+                <img [src]="assetPaths.americanexpress" alt="" class="img-1">
+                <img [src]="assetPaths.skrill" alt="skrill" class="img-1">
+                <img [src]="assetPaths.bitcoincash" alt="" class="img-2">
+                <img [src]="assetPaths.bitcoin" alt="" class="img-2">
+                <div class="info">and 50+ more</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-1">
+                <img [src]="assetPaths.fb" alt="" class="logo-social">
+                <img [src]="assetPaths.insta" alt="" class="logo-social">
+                <img [src]="assetPaths.tw" alt="" class="logo-social">
+                <img [src]="assetPaths.ds" alt="" class="logo-social">
+            </div>
+            <div class="divider"></div>
+            <div class="section-2">
+                <div class="colum-1">
+                    <img [src]="assetPaths.logo" alt="">
+                    <div class="email">supportchicksgold.com</div>
+                </div>
+                <div class="colum-2 info-col">
+                    <div class="title">Chicks Gold</div>
+                    <div class="content">Games</div>
+                    <div class="content">About Us</div>
+                    <div class="content">Blog</div>
+                    <div class="content">Sitemap</div>
+                </div>
+                <div class="colum-3 info-col">
+                    <div class="title">Support</div>
+                    <div class="content">Contact Us</div>
+                    <div class="content">FAQ</div>
+                </div>
+                <div class="colum-4 info-col">
+                    <div class="title">Legal</div>
+                    <div class="content">Privacy Policy</div>
+                    <div class="content">Term of Service</div>
+                    <div class="content">Copyright Policy</div>
+                </div>
+                <div class="colum-5">
+                    <img [src]="assetPaths.trustpillot" alt="">
+                    <a class="info">Trustpilot Reviews</a>
+                </div>
+            </div>
+            <div class="section-3">© 2017 - 2024 Chicksgold.com. All Rights Reserved</div>
+        </div>
+    </footer>
+</div>
+
